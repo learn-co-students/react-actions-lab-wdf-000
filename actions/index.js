@@ -1,6 +1,7 @@
 'use strict';
 
 function addColumn (ev) {
+  console.log('ev', ev);
 }
 
 function addRow (ev) {

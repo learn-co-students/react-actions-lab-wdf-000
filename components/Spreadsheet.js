@@ -10,14 +10,20 @@ class Spreadsheet extends React.Component {
     this.state = {
     };
 
+    this.handleAddColumn = this.handleAddColumn.bind(this);
   }
+
+  handleAddColumn (e) {
+    actions.addColumn.bind(e)
+  }
+
   render () {
     return (
       <div className='spreadsheet'>
         <h1>My little spreadsheet</h1>
 
         <div className='spreadsheet__buttons'>
-          <button>Add Column</button>
+          <button onClick= { this.handleAddColumn } >Add Column</button>
           {' '}
           <button>Add Row</button>
           {' '}
