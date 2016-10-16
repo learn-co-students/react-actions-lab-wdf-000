@@ -7,13 +7,24 @@ class Table extends React.Component {
   constructor(props) {
     super();
 
-    this.blu
+
+
   }
 
   render () {
     return (
-      <table className="table" onBlur={ this.blurCell }>
+      <table className="table" onBlur={ this.props.onBlur }>
         <tbody>
+          {
+            this.props.table.map(
+              (row, i ) => 
+              <Row key={ i } 
+                row={ row } 
+                onChange={ this.props.onChange.bind(null, i) }
+                onFocus={ this.props.onFocus.bind(null, i) }
+                />
+            )
+          }
         </tbody>
       </table>
     )
