@@ -1,9 +1,15 @@
 'use strict';
 
 const React = require('react');
+const actions = require('../actions/index')
 
 class Cell extends React.Component {
   render () {
+    return(
+      <td className="cell">
+        <input value={this.props.cell} onChange={this.props.onChange} onFocus={this.props.onFocus}/>
+      </td>
+    )
   }
 }
 
