@@ -8,6 +8,7 @@ class Spreadsheet extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
+      table: [[""]]
     };
 
   }
@@ -26,7 +27,7 @@ class Spreadsheet extends React.Component {
           <button>Remove Row</button>
         </div>
 
-        <Table />
+        <Table table={this.state.table} />
 
         <div className='spreadsheet__focused'>
         </div>
