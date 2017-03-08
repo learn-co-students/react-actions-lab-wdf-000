@@ -7,6 +7,7 @@ function addRow (ev) {
 }
 
 function changeCell (rowIndex, columnIndex, ev) {
+  
 }
 
 function focusCell (rowIndex, columnIndex) {
